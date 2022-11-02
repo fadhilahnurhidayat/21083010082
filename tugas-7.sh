@@ -1,13 +1,24 @@
 #!/bin/bash
 
-{
-	echo "==luas bidang persegi=="
-	echo "Masukkan Panjang"
-	read panjang
-	echo "Masukkan Lebar"
-	read lebar
-	let luasbidangpersegi=$panjang*$lebar
-	echo "Luas persegi :
-$luasbidangpersegi"
-
+# mendeklarasikan fungsi
+panjang() {
+	echo "Masukkan Panjang :"
+	read p
 }
+
+lebar() {
+	echo "Masukkan Lebar :"
+	read l
+}
+
+luas() {
+	echo "Program Menghitung Luas Bidang Persegi"
+	panjang
+	lebar
+	let l=$p*$l
+	echo "Luas Persegi :
+$l"
+}
+
+# memanggil fungsi
+luas
